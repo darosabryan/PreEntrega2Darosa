@@ -1,0 +1,353 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Black';
+    src: url('src/SourceSansPro-Black.ttf');
+
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    background-color:#2C3E50;
+    height: 60px;
+    width: 100%;   
+}
+
+.cabecera{
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
+
+.cabecera__menuMobil{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    position: relative;
+    left:93%;
+    top: 2px;
+
+}
+
+.cabecera__logo a{
+    text-decoration: none;
+
+}
+
+.cabecera__logo--text h1{
+    color:white;
+    position: relative;
+    font-size: 20px;
+    margin-top: -50px;;
+    margin-left: 80px;
+    
+}
+
+.cabecera__logo{
+    width: fit-content;
+    height: fit-content;
+    position:relative;
+    left:5%;
+    top:0;
+
+}
+
+
+.cabecera__buscador{
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    justify-content: center;
+    
+
+}
+
+.cabecera__buscador input{
+    width: 350px;
+    padding: 8px 20px;
+    padding-right: 35px;
+    border-radius: 5px;
+    border:0;
+    outline: none;
+
+}
+
+.cabecera__buscador button{
+    background-color:#C0392B ;
+    padding: 5px 10px;
+    position: absolute;
+    border: 0;
+    top: 0;
+    bottom:0;
+    right: 0;
+    margin: auto;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    cursor: pointer;
+
+}
+
+.cabecera__buscador button:hover{
+    background-color: #922B21;
+
+}
+
+.cabecera__usuario {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left:85%;
+    top: 20px;
+
+}
+
+.cabecera_usuario img{
+    display: none;    
+
+}
+
+.cabecera__usuario li{
+    display: inline-block;        
+
+}
+
+.cabecera__usuario li a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+
+}
+
+.cabecera__usuario li a:hover{
+    color:orange;
+    transition: all .3s;
+}
+
+
+nav{
+    position: relative;
+    width: 100%;
+}
+
+
+nav .menu{	
+    background-color: #009846 ;
+    text-align: center;
+    
+} 
+
+
+.menu li{
+    display: inline-block;
+    margin: 5px;
+    
+}
+
+.menu li a{
+    text-decoration:none;
+    color:white;
+    
+
+}
+
+.menu li a:hover{
+    color:orange;
+    transition: all .3s;
+
+}
+
+main{
+    display:flex;   
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 120px;
+
+}
+
+section{
+    background-color:#F2F4F4 ;
+    width: 50%;
+    box-shadow: 0 0 1px black;
+    border-radius: 5px;
+    padding: 20px;
+   
+}
+
+.categorias{
+    margin: 15px;
+
+}
+
+
+.categorias__cabecera{
+    padding: 5px;
+
+}
+
+.categorias__cuerpo{
+    display:flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.categorias__cuerpo--card{
+    width: 100px;
+    box-shadow: 0 0 1px black;
+    border-radius: 5px;
+    background-color: white;
+  
+}
+
+.categorias__cuerpo--card a{
+    text-decoration: none;
+
+}
+
+.categorias__cuerpo--cardImg{
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    
+}
+
+.categorias__cuerpo--cardText{
+    background-color: black;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.categorias__cuerpo--cardText p{
+    color: white;
+    text-align: center;
+
+}
+
+.categorias__cuerpo--cardText:hover{
+    background-color: #626567;
+    transition: all .3s;
+
+
+}
+
+.aboutus{
+    text-align: center;
+    width: 40%;
+    padding: 50px;
+    color: #212F3D;
+   
+} 
+
+.aboutus__titulo h4{
+    font-size: 32px;
+
+}
+
+.aboutus__text p{
+    font-size: 16px;
+    margin: 20px;
+
+
+}
+
+
+footer{
+    height: 100px;
+    background-color: #17202A;
+    text-align: center;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+footer a{
+    text-decoration: none;
+    color: #ABB2B9;
+    margin: 10px;
+
+}
+
+footer a:hover{
+    color:orange;
+    transition: all .3s;
+
+}
+
+ /*Media queries*/ 
+
+ 
+     @media(max-width: 480px){
+     /*Cabecera*/   
+        /*OCultar Logo*/
+        .cabecera__logo--text{
+            visibility: hidden;
+            width: 0;
+            height: 0;
+
+        }
+
+        /*Ocultar usuario*/
+        .cabecera__usuario{
+            visibility: hidden;
+            width: 0;
+            height: 0;
+
+        }
+
+        /*Mostrar menu para celulares*/
+        .cabecera__menuMobil{
+            visibility: visible;
+            width: fit-content;
+            height: fit-content;
+
+        }
+        
+
+
+     }
+     
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

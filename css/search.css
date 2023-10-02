@@ -1,0 +1,200 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Black';
+    src: url('src/SourceSansPro-Black.ttf');
+
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    background-color:#2C3E50;
+    height: 60px;
+    position: fixed;
+    width: 100%;    
+}
+
+.cabezera{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap; 
+
+}
+
+.cabezera h1{
+    color:white;
+    position: relative;
+    font-size: 20px;
+    margin-top: -50px;;
+    margin-left: 80px;
+}
+.cabezera .logo{
+    width: fit-content;
+    height: fit-content;
+    position:absolute;
+    left:5%;
+    top:0;
+
+}
+
+.cabezera .logo a{
+    text-decoration: none;
+
+}
+
+
+.cabezera .buscador{
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    top: 20px;
+    left: 39%;
+    
+
+}
+
+.cabezera .buscador input{
+    width: 350px;
+    padding: 8px 20px;
+    padding-right: 35px;
+    border-radius: 5px;
+    border:0;
+    outline: none;
+
+}
+
+.cabezera .buscador button{
+    background-color:#C0392B ;
+    padding: 5px 10px;
+    position: absolute;
+    border: 0;
+    top: 0;
+    bottom:0;
+    right: 0;
+    margin: auto;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    cursor: pointer;
+
+}
+
+.cabezera .buscador button:hover{
+    background-color: #922B21;
+
+}
+
+
+.cabezera .usuario li a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+
+}
+
+.cabezera .usuario {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left:85%;
+    top: 20px;
+
+}
+
+.cabezera .usuario li{
+    display: inline-block;        
+
+}
+
+.cabezera .usuario li a:hover{
+    color:orange;
+    transition: all .3s;
+}
+
+
+nav{
+    position: relative;
+    width: 100%;
+
+}
+
+nav .menu{	
+    background-color: #009846 ;
+    text-align: center;
+} 
+
+
+.menu li{
+    display: inline-block;
+    margin: 5px;
+    
+}
+
+.menu li a{
+    text-decoration:none;
+    color:white;
+    
+
+}
+
+.menu li a:hover{
+    color:orange;
+    transition: all .3s;
+
+}
+.cabezeraCategoria{
+    padding: 5px;
+
+}
+
+.submenu{
+    position: relative;
+
+}
+
+.submenu li a{
+    display: block;
+    color:black;
+}
+
+
+
+footer{
+    height: 100px;
+    background-color: #17202A;
+    text-align: center;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+footer a{
+    text-decoration: none;
+    color: #ABB2B9;
+    margin: 10px;
+
+}
+
+footer a:hover{
+    color:orange;
+    transition: all .3s;
+
+}
+
+
+
+ 
+
