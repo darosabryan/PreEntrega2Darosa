@@ -20,23 +20,24 @@ body{
 header{
     background-color:#2C3E50;
     height: 60px;
-    width: 100%;   
+    position: fixed;
+    width: 100%;    
 }
 
 .cabecera{
     width: 100%;
     height: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 100%;
 
+    
 }
 
-.cabecera__menuMobil{
-    visibility: hidden;
-    width: 0;
-    height: 0;
-    position: relative;
-    left:93%;
-    top: 2px;
+.cabecera__caja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -47,51 +48,63 @@ header{
 
 .cabecera__logo--text h1{
     color:white;
-    position: relative;
     font-size: 20px;
-    margin-top: -50px;;
-    margin-left: 80px;
+
     
 }
 
 .cabecera__logo{
-    width: fit-content;
-    height: fit-content;
-    position:relative;
-    left:5%;
-    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
+.cabecera__logo--img{
+    height: fit-content;
+    width: fit-content;
+
+
+}
+
+.cabecera__logo--text{
+    height: fit-content;
+    width: fit-content;
+
+}
 
 .cabecera__buscador{
-    height: fit-content;
-    width: fit-content;
-    position: relative;
-    justify-content: center;
-    
+   display: flex;
 
 }
 
-.cabecera__buscador input{
-    width: 350px;
-    padding: 8px 20px;
-    padding-right: 35px;
-    border-radius: 5px;
+.cabecera__buscador--input{
+    height: 40px;
+    width: 90%;
+
+}
+
+.cabecera__buscador--button{
+    height: 40px;
+    width: 40px;
+}
+
+
+.cabecera__buscador--input input{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
     border:0;
+    padding: 0 5px;
     outline: none;
 
 }
 
-.cabecera__buscador button{
-    background-color:#C0392B ;
-    padding: 5px 10px;
-    position: absolute;
+.cabecera__buscador--button button{
+    width: 100%;
+    height: 100%;
+    background-color:#5DADE2 ;
     border: 0;
-    top: 0;
-    bottom:0;
-    right: 0;
-    margin: auto;
     border-radius: 0 5px 5px 0;
     color: white;
     cursor: pointer;
@@ -99,73 +112,100 @@ header{
 }
 
 .cabecera__buscador button:hover{
-    background-color: #922B21;
+    background-color: #2874A6;
 
 }
 
 .cabecera__usuario {
-    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cabecera__usuario--img{
     height: fit-content;
-    position: absolute;
-    left:85%;
-    top: 20px;
+    width: fit-content;
 
 }
 
-.cabecera_usuario img{
-    display: none;    
+.cabecera__usuario--text{
+    height: fit-content;
+    width: fit-content;
 
 }
 
-.cabecera__usuario li{
+.cabecera__usuario--text {
     display: inline-block;        
 
 }
 
-.cabecera__usuario li a{
+.cabecera__usuario--text a{
     text-decoration: none;
     color: white;
     margin: 5px;
 
 }
 
-.cabecera__usuario li a:hover{
+.cabecera__usuario--text a:hover{
     color:orange;
     transition: all .3s;
 }
-
 
 nav{
     position: relative;
     width: 100%;
 }
 
-
-nav .menu{	
-    background-color: #009846 ;
-    text-align: center;
-    
+.menu{	
+    background-color: #F39C12;
+    list-style: none;
+    display: flex;
+    justify-content: center;
 } 
 
 
 .menu li{
     display: inline-block;
-    margin: 5px;
+    margin: 4px;
+    
     
 }
 
 .menu li a{
     text-decoration:none;
     color:white;
+    display: block;
     
+}
+
+.menu__subMenu li{ 
+ display: block;
+}
+
+.menu__subMenu{
+    position: absolute;
+    display: none;
+    list-style: none;
+    background-color: #283747;
+    
+    
+}
+
+
+.menu li:hover .menu__subMenu{
+    display: block;
 
 }
 
 .menu li a:hover{
-    color:orange;
+    color:#566573;
     transition: all .3s;
 
 }
+.menu__subMenu li a:hover{
+    color: orange;
+   } 
 
 main{
     display:flex;   
@@ -173,20 +213,21 @@ main{
     justify-content: space-between;
     flex-direction: column;
     padding: 120px;
-
+    
 }
 
 section{
     background-color:#F2F4F4 ;
-    width: 50%;
+    width:50%;
     box-shadow: 0 0 1px black;
     border-radius: 5px;
-    padding: 20px;
+    padding: 0px;
    
 }
 
 .categorias{
     margin: 15px;
+    overflow: hidden;
 
 }
 
@@ -245,7 +286,7 @@ section{
 .aboutus{
     text-align: center;
     width: 40%;
-    padding: 50px;
+	padding:50px
     color: #212F3D;
    
 } 
@@ -255,23 +296,28 @@ section{
 
 }
 
+.aboutus__titulo{
+    overflow: hidden;
+
+}
+
 .aboutus__text p{
     font-size: 16px;
     margin: 20px;
-
 
 }
 
 
 footer{
     height: 100px;
+    width: 100%;
     background-color: #17202A;
     text-align: center;
     margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    overflow: hidden;
 
 }
 
@@ -290,36 +336,46 @@ footer a:hover{
 
  /*Media queries*/ 
 
- 
+
      @media(max-width: 480px){
      /*Cabecera*/   
         /*OCultar Logo*/
         .cabecera__logo--text{
-            visibility: hidden;
-            width: 0;
-            height: 0;
+            display: none;
 
         }
 
         /*Ocultar usuario*/
-        .cabecera__usuario{
-            visibility: hidden;
-            width: 0;
-            height: 0;
+        .cabecera__usuario--text{
+            display: none;
 
         }
 
-        /*Mostrar menu para celulares*/
-        .cabecera__menuMobil{
-            visibility: visible;
-            width: fit-content;
-            height: fit-content;
+        .cabecera{
+            grid-template-columns: 1fr 3fr 1fr;
 
         }
-        
 
+        .menu_imgChevronDown img{
+           display: none;
 
+        }
      }
+
+     @media(max-width:780px){
+        section{
+            width: 100vw;
+
+        }
+
+       
+
+        }
+
+
+     
+
+
      
 
 
