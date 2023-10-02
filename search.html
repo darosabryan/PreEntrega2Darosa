@@ -9,72 +9,81 @@
 </head>
 <body>
     <header>
-        <!---->
-        
-        <div class="cabezera" id="home">
-            <div class="logo">
-                <a href="index.html">
-                <img src="img/favIcon.png" alt="Logo"/>
-                <h1>Electronic Store</h1>
-                </a>
-            </div>
-          
-            <div class="buscador">
-                <input type="text" placeholder="buscar..">
-                <button><img src="img/lupa.png" alt="lupa"></button>
-             
-            </div>
+        <!--Cabecera--> 
+        <div class="cabecera">
 
-
-            <ul class="usuario">                   
-                <li><a href="login.html">
-                    <img src="img/user.png" alt="Usuario"/>
-                    
-                        Ingresar
-                    </a>
-                </li>         
-                <li><a href="signIn.html">
-                    Crear Cuenta
-
-                    </a>
-                </li>                       
+            <!--Inicio-Caja Logo-->
+            <div class="cabecera__logo">
                 
-                </ul>     
+                    <div class="cabecera__logo--img"><a href="index.html"><img src="img/favIcon.png" alt="Logo"/></a></div>
+                    <div class="cabecera__logo--text"><a href="index.html"><h1>Electronic Store</h1></a></div>
+                    
             
+            </div>
+            <!--Fin-Caja Logo-->
+
+
+            <!--Inicio-Barra de busqueda-->
+            <div class="cabecera__caja cabecera__buscador">
+                <div class="cabecera__buscador--input"><input type="text" placeholder="buscar.."></div>
+                <div class="cabecera__buscador--button"><button >
+                    <a href="search.html"><img src="img/lupa.png" alt="lupa"></a>    
+
+                </div>
+            </div>
+            <!--Fin-Barra de busqueda-->
+
+            <!--Inicio-Caja usuario-->          
+            <div class="cabecera__caja cabecera__usuario">
+                        
+                <div class="cabecera__usuario--img"><img src="img/user.png" alt="Usuario"/></div>
+                <div class="cabecera__usuario--text">
+                    <a href="signIn.html">Crear Cuenta</a>
+                    <a href="login.html">Ingresar</a>
+                                       
+                </div>    
+
+            </div>
         
         </div>
         
         <nav>
             <ul class="menu">
+                <li><img src="img/ubi.png" alt="Ubicación"/></li>
                 <li>
-                    <img src="img/ubi.png" alt="Ubicación"/> 
                     <a href="#">Ubicación</a>               
                 </li>
-                
                 <li>
-                    <a href="">Categorías</a>
-                     <img src="img/chevronDown.png" alt="chevronDown">
-                </li>                                     
-                 
+                    <a href="#">Categorías</a>
+
+                    <ul class="menu__subMenu">
+                       <li><a href="search.html">Celulares</a></li>
+                       <li><a href="search.html">Computación</a></li>
+                       <li><a href="search.html">Cámaras</a></li>
+                       <li><a href="search.html">Electrónica</a></li>
+                       <li><a href="search.html">Audio&Video</a></li>
+                       <li><a href="search.html">Consolas</a></li> 
+                    </ul>
                 
+                </li>                     
+                <li class="menu_imgChevronDown"><img src="img/chevronDown.png" alt="chevronDown"></li>                               
                 <li><a href="search.html">Ofertas</a></li>
                 <li><a href="clientService.html">Servicio al cliente</a></li>
                     
             </ul>
         </nav> 
+        <!--Fin-Barra de navegacion-->
 
     </header>
+    <!--Inicio-Barra de navegacion-->
 
-    
-    <main>    
-       
-
+    <main>
         
     </main>
 
-
+    <!--Pie de pagina-->
     <footer>
-        <a href="">Inicio</a>
+        <a href="#home">Inicio</a>
         <a href="aboutUs.html">Nosotros</a>
     </footer>
 

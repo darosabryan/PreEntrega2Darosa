@@ -24,160 +24,212 @@ header{
     width: 100%;    
 }
 
-.cabezera{
+/*Contenedor de cabecera__logo; cabecera__buscador; cabecera__usaurio*/
+.cabecera{
     width: 100%;
     height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 100%;
+
+    
+}
+/*codigo que comparten las 3 cajas de la cabecera, mencionados anteriormente*/
+.cabecera__caja{
     display: flex;
-    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
 
 }
 
-.cabezera h1{
-    color:white;
-    position: relative;
-    font-size: 20px;
-    margin-top: -50px;;
-    margin-left: 80px;
-}
-.cabezera .logo{
-    width: fit-content;
-    height: fit-content;
-    position:absolute;
-    left:5%;
-    top:0;
+.cabecera__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
-
-.cabezera .logo a{
+/*Inicio-Logo de la cabecera*/
+.cabecera__logo a{
     text-decoration: none;
 
 }
 
+.cabecera__logo--text h1{
+    color:white;
+    font-size: 20px;
 
-.cabezera .buscador{
+    
+}
+
+.cabecera__logo--img{
     height: fit-content;
     width: fit-content;
-    position: relative;
-    top: 20px;
-    left: 39%;
-    
+
 
 }
 
-.cabezera .buscador input{
-    width: 350px;
-    padding: 8px 20px;
-    padding-right: 35px;
-    border-radius: 5px;
+.cabecera__logo--text{
+    height: fit-content;
+    width: fit-content;
+
+}
+/*Fin-Logo de la cabecera*/
+
+/*Inicio-Buscador de la cabecera*/
+.cabecera__buscador{
+   display: flex;
+
+}
+
+.cabecera__buscador--input{
+    height: 40px;
+    width: 90%;
+
+}
+
+.cabecera__buscador--button{
+    height: 40px;
+    width: 40px;
+}
+
+
+.cabecera__buscador--input input{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
     border:0;
+    padding: 0 5px;
     outline: none;
 
 }
 
-.cabezera .buscador button{
-    background-color:#C0392B ;
-    padding: 5px 10px;
-    position: absolute;
+.cabecera__buscador--button button{
+    width: 100%;
+    height: 100%;
+    background-color:#5DADE2 ;
     border: 0;
-    top: 0;
-    bottom:0;
-    right: 0;
-    margin: auto;
     border-radius: 0 5px 5px 0;
     color: white;
     cursor: pointer;
 
 }
 
-.cabezera .buscador button:hover{
-    background-color: #922B21;
+/*Efectos del buscador*/
+.cabecera__buscador button:hover{
+    background-color: #2874A6;
 
 }
 
+/*Fin-Buscador de la cabecera*/
 
-.cabezera .usuario li a{
+
+/*Inicio-Login&Signin*/
+.cabecera__usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cabecera__usuario--img{
+    height: fit-content;
+    width: fit-content;
+
+}
+
+.cabecera__usuario--text{
+    height: fit-content;
+    width: fit-content;
+
+}
+
+.cabecera__usuario--text {
+    display: inline-block;        
+
+}
+
+.cabecera__usuario--text a{
     text-decoration: none;
     color: white;
     margin: 5px;
 
 }
-
-.cabezera .usuario {
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    left:85%;
-    top: 20px;
-
-}
-
-.cabezera .usuario li{
-    display: inline-block;        
-
-}
-
-.cabezera .usuario li a:hover{
+/*Efectos*/
+.cabecera__usuario--text a:hover{
     color:orange;
     transition: all .3s;
 }
 
+/*Fin-Login&Signin*/
 
-nav{
-    position: relative;
-    width: 100%;
-
-}
-
-nav .menu{	
-    background-color: #009846 ;
-    text-align: center;
+/*Inicio-Menu de navegacion*/
+.menu{	
+    background-color: #F39C12;
+    list-style: none;
+    display: flex;
+    justify-content: center;
 } 
 
 
 .menu li{
     display: inline-block;
-    margin: 5px;
+    margin: 4px;
+    
     
 }
 
 .menu li a{
     text-decoration:none;
     color:white;
+    display: block;
     
+}
+
+/*SubMenu de navegacion*/
+.menu__subMenu li{ 
+ display: block;
+}
+
+.menu__subMenu{
+    position: absolute;
+    display: none;
+    list-style: none;
+    background-color: #283747;
+    
+    
+}
+
+/*Efectos*/
+.menu li:hover .menu__subMenu{
+    display: block;
 
 }
 
 .menu li a:hover{
-    color:orange;
+    color:#566573;
     transition: all .3s;
 
 }
-.cabezeraCategoria{
-    padding: 5px;
+.menu__subMenu li a:hover{
+    color: orange;
+   } 
 
-}
 
-.submenu{
-    position: relative;
-
-}
-
-.submenu li a{
-    display: block;
-    color:black;
-}
+/*Fin-Menu de navegacion*/   
 
 
 
+/*Inicio-Pie de pagina*/
 footer{
     height: 100px;
+    width: 100%;
     background-color: #17202A;
     text-align: center;
     margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    overflow: hidden;
 
 }
 
@@ -188,8 +240,39 @@ footer a{
 
 }
 
+/*Efectos*/
 footer a:hover{
     color:orange;
     transition: all .3s;
 
 }
+/*Fin-Pie de pagina*/
+
+ /*Media queries*/ 
+     @media(max-width: 480px){
+     /*Cabecera*/   
+        /*OCultar Logo*/
+        .cabecera__logo--text{
+            display: none;
+
+        }
+
+        /*Ocultar usuario*/
+        .cabecera__usuario--text{
+            display: none;
+
+        }
+
+
+        .cabecera{
+            grid-template-columns: 1fr 3fr 1fr;
+
+        }
+
+        .menu_imgChevronDown img{
+           display: none;
+
+        }
+     }
+
+    
